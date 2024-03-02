@@ -3,8 +3,6 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-// TODO: Add CSS loaders and babel to webpack.
 
 module.exports = () => {
 	return {
@@ -20,7 +18,7 @@ module.exports = () => {
 		plugins: [
 			new HtmlWebpackPlugin({
 				template: './index.html',
-				title: 'K.I.T.T.I.E.S',
+				title: 'C.H.A.R.I.Z.A.R.D',
 				favicon: './favicon.ico',
 			}),
 			// Injects the custom service worker
@@ -33,7 +31,7 @@ module.exports = () => {
 				fingerprints: false,
 				inject: true,
 				name: 'Kitten Impregnable Thoughts Text In-Line Editing Software',
-				short_name: 'K.I.T.T.I.E.S.',
+				short_name: 'C.H.A.R.I.Z.A.R.D.',
 				description: "Thoughts that even cats can't tear up!",
 				favicon: './favicon.ico',
 				// Theme and background color pulled from duotone-light.min.css
@@ -43,7 +41,7 @@ module.exports = () => {
 				publicPath: '/',
 				icons: [
 					{
-						src: path.resolve('src/images/logoNew.png'),
+						src: path.resolve('src/images/logo.png'),
 						sizes: [96, 128, 192, 256, 384, 512],
 						destination: path.join('assets', 'icons'),
 					},
