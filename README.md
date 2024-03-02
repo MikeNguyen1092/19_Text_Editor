@@ -18,7 +18,7 @@ Install the dependencies in the `package.json` run this in the root folder `npm 
 
 ## Usage
 
-Please follow the link for the render app. 
+Please follow this [link](https://one9-text-editor.onrender.com) for the render app. URL - https://one9-text-editor.onrender.com
 
 ## Credits
 
