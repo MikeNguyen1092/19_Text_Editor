@@ -30,7 +30,7 @@ module.exports = () => {
 			new WebpackPwaManifest({
 				fingerprints: false,
 				inject: true,
-				name: 'Kitten Impregnable Thoughts Text In-Line Editing Software',
+				name: 'Just Another Text Editor - Charizard Edition',
 				short_name: 'C.H.A.R.I.Z.A.R.D.',
 				description: "Thoughts that even cats can't tear up!",
 				favicon: './favicon.ico',
