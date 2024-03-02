@@ -2,7 +2,7 @@
 ![Static Badge](https://img.shields.io/badge/license-MIT-blue)
 
 ## Description
-I want to create app that meets PWA criteria standards. It 
+I want to create app that meets PWA criteria standards.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ Install the dependencies in the `package.json` run this in the root folder `npm 
 
 ## Usage
 
-Please follow the [video demonstration](https://drive.google.com/file/d/1sM6mt8AAia4rbZ8B6rrSDHxgt189sDPY/view?usp=sharing). URL-https://drive.google.com/file/d/1sM6mt8AAia4rbZ8B6rrSDHxgt189sDPY/view?usp=sharing
+Please follow the link for the render app. 
 
 ## Credits
 

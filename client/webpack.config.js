@@ -32,7 +32,7 @@ module.exports = () => {
 				inject: true,
 				name: 'Just Another Text Editor - Charizard Edition',
 				short_name: 'C.H.A.R.I.Z.A.R.D.',
-				description: "Thoughts that even cats can't tear up!",
+				description: "Use Flame Throw",
 				favicon: './favicon.ico',
 				// Theme and background color pulled from duotone-light.min.css
 				background_color: '#faf8f5',

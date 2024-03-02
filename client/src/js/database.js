@@ -1,38 +1,42 @@
-import { openDB } from 'idb';
+import { openDB } from "idb";
 
 const initdb = async () =>
-	openDB('jate', 1, {
-		upgrade(db) {
-			if (db.objectStoreNames.contains('jate')) {
-				console.log('jate database already exists');
-				return;
-			}
-			db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
-			console.log('jate database created');
-		},
-	});
+  // Creates a new database named 'charizard' which will be using version 1 of the database.
+  openDB("charizard", 1, {
+    // Adds database schema if it has not already been initialized.
+    upgrade(db) {
+      if (db.objectStoreNames.contains("charizard")) {
+        console.log("Database for CHARIZARD already exists");
+        return;
+      }
+      // Creates a new object store for the data and gives it a key name of 'id' which increments automatically.
+      db.createObjectStore("charizard", { keyPath: "id", autoIncrement: true });
+      console.log("Database for CHARIZARD has been created");
+    },
+  });
 
-
+// Exports a function to POST to the database.
 export const putDb = async (content) => {
-	console.log('Posted to database');
-	// Creates a connection to the charizard database and version.
-	const charizardDb = await openDB('charizard', 1);
+  console.log("Post to the database");
 
-	// Creates a new transaction and specifies the database and data privileges.
-	const tx = charizardDb.transaction('charizard', 'readwrite');
+  // Creates a connection to the charizard database and version.
+  const charizardDb = await openDB("charizard", 1);
 
-	// Opens up the desired object store.
-	const store = tx.objectStore('charizard');
+  // Creates a new transaction and specifies the database and data privileges.
+  const tx = charizardDb.transaction("charizard", "readwrite");
 
-	// Uses the .put() method on the store and passes in the content.
-	const request = store.put({ id: 1, charizard: content });
+  // Opens up the desired object store.
+  const store = tx.objectStore("charizard");
 
-	// Gets confirmation of the request.
-	const result = await request;
-	console.log('Data saved to the database:', result.values);
+  // Uses the .put() method on the store and passes in the content.
+  const request = store.put({ id: 1, charizard: content });
+
+  // Gets confirmation of the request.
+  const result = await request;
+  console.log("Data saved to the database:", result.values);
 };
 
-
+// Exports a function to get the database.
 export const getDb = async () => {
   console.log("Get all notes from the database");
 
@@ -57,4 +61,5 @@ export const getDb = async () => {
   return result?.charizard;
 };
 
+// Starts database
 initdb();
